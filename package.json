@@ -1,0 +1,39 @@
+{
+  "name": "@stdlib/blas-base-gscal",
+  "version": "0.0.0",
+  "description": "Multiply a vector by a constant.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./index.mjs",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/blas-base-gscal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "mathematics",
+    "math",
+    "blas",
+    "level 1",
+    "dscal",
+    "sscal",
+    "linear",
+    "algebra",
+    "scal",
+    "scale",
+    "subroutines",
+    "alpha",
+    "vector",
+    "array",
+    "ndarray"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
