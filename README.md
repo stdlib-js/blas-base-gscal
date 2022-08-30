@@ -31,13 +31,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import gscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@esm/index.mjs';
+import gscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@v0.0.8-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@esm/index.mjs';
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@v0.0.8-esm/index.mjs';
 ```
 
 #### gscal( N, alpha, x, stride )
@@ -151,7 +151,7 @@ gscal.ndarray( 3, alpha, x, 1, x.length-3 );
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import gscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@esm/index.mjs';
+import gscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@v0.0.8-esm/index.mjs';
 
 var rand;
 var sign;
