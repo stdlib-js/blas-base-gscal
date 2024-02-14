@@ -35,32 +35,38 @@ limitations under the License.
 
 > Multiply a vector `x` by a constant `alpha`.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/blas-base-gscal
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var gscal = require( '@stdlib/blas-base-gscal' );
+gscal = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var gscal = require( 'path/to/vendor/umd/blas-base-gscal/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.gscal;
+})();
+</script>
 ```
 
 #### gscal( N, alpha, x, stride )
@@ -153,9 +159,14 @@ gscal.ndarray( 3, 5.0, x, 1, x.length-3 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
-var gscal = require( '@stdlib/blas-base-gscal' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var opts = {
     'dtype': 'float64'
@@ -165,6 +176,11 @@ console.log( x );
 
 gscal( x.length, 5.0, x, 1 );
 console.log( x );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -267,13 +283,13 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/blas/base/dscal]: https://github.com/stdlib-js/blas-base-dscal
+[@stdlib/blas/base/dscal]: https://github.com/stdlib-js/blas-base-dscal/tree/umd
 
-[@stdlib/blas/base/sscal]: https://github.com/stdlib-js/blas-base-sscal
+[@stdlib/blas/base/sscal]: https://github.com/stdlib-js/blas-base-sscal/tree/umd
 
 <!-- <related-links> -->
 
-[@stdlib/blas/base/gaxpy]: https://github.com/stdlib-js/blas-base-gaxpy
+[@stdlib/blas/base/gaxpy]: https://github.com/stdlib-js/blas-base-gaxpy/tree/umd
 
 <!-- </related-links> -->
 
