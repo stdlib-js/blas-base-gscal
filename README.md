@@ -142,6 +142,7 @@ gscal.ndarray( 3, 5.0, x, 1, x.length-3 );
 
 -   If `N <= 0`, both functions return `x` unchanged.
 -   `gscal()` corresponds to the [BLAS][blas] level 1 function [`dscal`][dscal] with the exception that this implementation works with any array type, not just Float64Arrays. Depending on the environment, the typed versions ([`dscal`][@stdlib/blas/base/dscal], [`sscal`][@stdlib/blas/base/sscal], etc.) are likely to be significantly more performant.
+-   Both functions support array-like objects having getter and setter accessors for array element access (e.g., [`@stdlib/array-base/accessor`][@stdlib/array/base/accessor]).
 
 </section>
 
@@ -213,7 +214,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -266,6 +267,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [mdn-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
+
+[@stdlib/array/base/accessor]: https://github.com/stdlib-js/array-base-accessor
 
 [@stdlib/blas/base/dscal]: https://github.com/stdlib-js/blas-base-dscal
 
