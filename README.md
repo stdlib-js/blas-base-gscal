@@ -33,45 +33,39 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Multiply a vector `x` by a constant `alpha`.
+> Multiply a vector by a scalar constant.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-base-gscal
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-gscal = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var gscal = require( 'path/to/vendor/umd/blas-base-gscal/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.gscal;
-})();
-</script>
+var gscal = require( '@stdlib/blas-base-gscal' );
 ```
 
 #### gscal( N, alpha, x, stride )
 
-Multiplies a vector `x` by a constant `alpha`.
+Multiplies a vector by a scalar constant.
 
 ```javascript
 var x = [ -2.0, 1.0, 3.0, -5.0, 4.0, 0.0, -1.0, -3.0 ];
@@ -85,9 +79,9 @@ The function has the following parameters:
 -   **N**: number of indexed elements.
 -   **alpha**: scalar constant.
 -   **x**: input [`Array`][mdn-array] or [`typed array`][mdn-typed-array].
--   **stride**: index increment.
+-   **stride**: stride length.
 
-The `N` and `stride` parameters determine which elements in `x` are accessed at runtime. For example, to multiply every other value by a constant
+The `N` and stride parameters determine which elements in the strided array are accessed at runtime. For example, to multiply every other value by a scalar constant:
 
 ```javascript
 var x = [ -2.0, 1.0, 3.0, -5.0, 4.0, 0.0, -1.0, -3.0 ];
@@ -116,7 +110,7 @@ If either `N` or `stride` is less than or equal to `0`, the function returns `x`
 
 #### gscal.ndarray( N, alpha, x, stride, offset )
 
-Multiplies a vector `x` by a constant `alpha` using alternative indexing semantics.
+Multiplies a vector by a scalar constant using alternative indexing semantics.
 
 ```javascript
 var x = [ -2.0, 1.0, 3.0, -5.0, 4.0, 0.0, -1.0, -3.0 ];
@@ -129,7 +123,7 @@ The function has the following additional parameters:
 
 -   **offset**: starting index.
 
-While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying buffer, the `offset` parameter supports indexing semantics based on a starting index. For example, to multiply the last three elements of `x` by a constant
+While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying buffer, the offset parameter supports indexing semantics based on a starting index. For example, to multiply the last three elements:
 
 ```javascript
 var x = [ 1.0, -2.0, 3.0, -4.0, 5.0, -6.0 ];
@@ -160,14 +154,9 @@ gscal.ndarray( 3, 5.0, x, 1, x.length-3 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var gscal = require( '@stdlib/blas-base-gscal' );
 
 var opts = {
     'dtype': 'float64'
@@ -177,11 +166,6 @@ console.log( x );
 
 gscal( x.length, 5.0, x, 1 );
 console.log( x );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -284,15 +268,15 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/array/base/accessor]: https://github.com/stdlib-js/array-base-accessor/tree/umd
+[@stdlib/array/base/accessor]: https://github.com/stdlib-js/array-base-accessor
 
-[@stdlib/blas/base/dscal]: https://github.com/stdlib-js/blas-base-dscal/tree/umd
+[@stdlib/blas/base/dscal]: https://github.com/stdlib-js/blas-base-dscal
 
-[@stdlib/blas/base/sscal]: https://github.com/stdlib-js/blas-base-sscal/tree/umd
+[@stdlib/blas/base/sscal]: https://github.com/stdlib-js/blas-base-sscal
 
 <!-- <related-links> -->
 
-[@stdlib/blas/base/gaxpy]: https://github.com/stdlib-js/blas-base-gaxpy/tree/umd
+[@stdlib/blas/base/gaxpy]: https://github.com/stdlib-js/blas-base-gaxpy
 
 <!-- </related-links> -->
 
