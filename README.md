@@ -42,13 +42,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import gscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@esm/index.mjs';
+import gscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@v0.3.0-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@esm/index.mjs';
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@v0.3.0-esm/index.mjs';
 ```
 
 #### gscal( N, alpha, x, stride )
@@ -149,7 +149,7 @@ gscal.ndarray( 3, 5.0, x, 1, x.length-3 );
 <script type="module">
 
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
-import gscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@esm/index.mjs';
+import gscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gscal@v0.3.0-esm/index.mjs';
 
 var opts = {
     'dtype': 'float64'
