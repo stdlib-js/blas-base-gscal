@@ -2,9 +2,9 @@
 
 > Package changelog.
 
-<section class="release" id="unreleased">
+<section class="release" id="v0.3.0">
 
-## Unreleased (2025-04-07)
+## 0.3.0 (2026-01-31)
 
 <section class="features">
 
@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`2035f34`](https://github.com/stdlib-js/stdlib/commit/2035f344a1a469278042b7532f034dc6119933b3) - **docs:** add function documentation _(by Athan Reines)_
 -   [`8dc22d7`](https://github.com/stdlib-js/stdlib/commit/8dc22d75fe8396c5fe89418a325a174c531d95eb) - **refactor:** update `blas/base/gscal` to follow current project conventions [(#5447)](https://github.com/stdlib-js/stdlib/pull/5447) _(by Saurabh Singh, Athan Reines, Muhammad Haris, stdlib-bot)_
 -   [`3b48bb5`](https://github.com/stdlib-js/stdlib/commit/3b48bb5eb47d5a8559d8d7e82f7639ee59d90d21) - **feat:** add accessor array support to `blas/base/gscal` [(#5418)](https://github.com/stdlib-js/stdlib/pull/5418) _(by Muhammad Haris, Athan Reines)_
 -   [`d3d3d14`](https://github.com/stdlib-js/stdlib/commit/d3d3d14939ac77ab7d5a4476551108f8ff1c3f1f) - **docs:** update related packages sections [(#4149)](https://github.com/stdlib-js/stdlib/pull/4149) _(by stdlib-bot, Philipp Burckhardt)_
