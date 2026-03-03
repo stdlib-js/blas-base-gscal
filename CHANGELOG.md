@@ -2,6 +2,40 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2026-03-03)
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`c03e6d3`](https://github.com/stdlib-js/stdlib/commit/c03e6d3c8e1213aed8411c0655951b5968db3e9e) - **bench:** use string interpolation in `blas/base/gscal` [(#10634)](https://github.com/stdlib-js/stdlib/pull/10634) _(by Om-A-osc)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 1 person contributed to this release. Thank you to this contributor:
+
+-   Om-A-osc
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.3.1">
 
 ## 0.3.1 (2026-02-08)
